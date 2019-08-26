@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.1'
+ruby '2.6.3'
 
 gem 'rails', '~> 5.2.0'
 
@@ -14,18 +16,18 @@ gem 'puma'
 gem 'sass-rails'
 gem 'sqlite3'
 gem 'turbolinks'
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'uglifier'
 
 group :development do
   gem 'listen'
-  gem 'spring-watcher-listen'
   gem 'spring'
+  gem 'spring-watcher-listen'
   gem 'web-console'
 end
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
 end
 
